@@ -1,0 +1,8 @@
+.btn {transition-duration: 0.25s !important;}
+.btn-secondary {
+    border: 2px solid $primary !important;
+
+    &:hover, &:focus {
+        background-color: $gray-200 !important;
+    }
+}

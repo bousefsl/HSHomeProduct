@@ -1,0 +1,34 @@
+/*@font-face mixin*/
+@mixin font-face($style-name, $file) {
+    $filepath: "../fonts/" + $file;
+  
+    @font-face {
+      font-family: "#{$style-name}";
+      src: url($filepath + ".eot");
+      src: url($filepath + ".eot?#iefix") format("embedded-opentype"),
+        url($filepath + ".woff") format("woff"),
+        url($filepath + ".ttf") format("truetype"),
+        url($filepath + ".svg#" + $style-name + "") format("svg");
+    }
+  
+    %#{$style-name} {
+      font: {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+  
+  /*Museo font*/
+  @include font-face('museo-sans-rounded-300', 'museo-sans-rounded-300-webfont');
+  @include font-face('museo-sans-rounded-500', 'museo-sans-rounded-500-webfont');
+  @include font-face('museo-sans-rounded-700', 'museo-sans-rounded-700-webfont');
+  @include font-face('museo-sans-rounded-900', 'museo-sans-rounded-900-webfont');
+  /*Icons font*/
+  @include font-face('HomeServe-Icons', 'HomeServe-Icons');
+  @include font-face('HS-Line-Icons', 'HS-Line-Icons');
+
+  $font-family-thin-stack: 'museo-sans-rounded-300', Arial, sans-serif;
+  $font-family-medium-stack: 'museo-sans-rounded-500', Arial, sans-serif;
+  $font-family-thick-stack: 'museo-sans-rounded-700', Arial, sans-serif;
+  $font-family-extrathick-stack: 'museo-sans-rounded-900', Arial, sans-serif;

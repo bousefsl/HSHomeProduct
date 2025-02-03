@@ -1,0 +1,295 @@
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Color system
+
+// scss-docs-start gray-color-variables
+$white:    #fff;
+$gray-100: #e6e6e6;
+$gray-200: #ccc;
+$gray-300: #b3b3b3;
+$gray-400: #999;
+$gray-500: #808080;
+$gray-600: #666;
+$gray-700: #4d4d4d;
+$gray-800: #333;
+$gray-900: #1a1a1a;
+$black:    #000;
+
+$gray-50: #f9f9f8;
+$gray-60: #f0f0f0;
+
+// scss-docs-end gray-color-variables
+
+// scss-docs-start color-variables
+$blue:      #0087b4;
+$link-blue: #0078a0;
+$red:       #e62419;
+$teal:      #00838f;
+$warm-gray: #eceae6;
+$cool-gray: #d1d7db;
+// scss-docs-end color-variables
+
+// scss-docs-start colors-map
+$colors: (
+  "blue":       $blue,
+  "link-blue":  $link-blue,
+  "red":        $red,
+  "teal":       $teal,
+  "black":      $black,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+);
+// scss-docs-end colors-map
+
+// fusv-disable
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+
+$link-blue-50: tint-color($link-blue, 90%);
+$link-blue-100: tint-color($link-blue, 80%);
+$link-blue-200: tint-color($link-blue, 60%);
+$link-blue-300: tint-color($link-blue, 40%);
+$link-blue-400: tint-color($link-blue, 20%);
+$link-blue-500: $link-blue;
+$link-blue-600: shade-color($link-blue, 20%);
+$link-blue-700: shade-color($link-blue, 40%);
+$link-blue-800: shade-color($link-blue, 60%);
+$link-blue-900: shade-color($link-blue, 80%);
+
+$red-100: tint-color($red, 80%);
+$red-200: tint-color($red, 60%);
+$red-300: tint-color($red, 40%);
+$red-400: tint-color($red, 20%);
+$red-500: $red;
+$red-600: shade-color($red, 20%);
+$red-700: shade-color($red, 40%);
+$red-800: shade-color($red, 60%);
+$red-900: shade-color($red, 80%);
+
+$teal-100: tint-color($teal, 80%);
+$teal-200: tint-color($teal, 60%);
+$teal-300: tint-color($teal, 40%);
+$teal-400: tint-color($teal, 20%);
+$teal-500: $teal;
+$teal-600: shade-color($teal, 20%);
+$teal-700: shade-color($teal, 40%);
+$teal-800: shade-color($teal, 60%);
+$teal-900: shade-color($teal, 80%);
+
+$warm-gray-100: tint-color($warm-gray, 80%);
+$warm-gray-200: tint-color($warm-gray, 60%);
+$warm-gray-300: tint-color($warm-gray, 40%);
+$warm-gray-400: tint-color($warm-gray, 20%);
+$warm-gray-500: $warm-gray;
+$warm-gray-600: shade-color($warm-gray, 20%);
+$warm-gray-700: shade-color($warm-gray, 40%);
+$warm-gray-800: shade-color($warm-gray, 60%);
+$warm-gray-900: shade-color($warm-gray, 80%);
+
+$cool-gray-100: tint-color($cool-gray, 80%);
+$cool-gray-200: tint-color($cool-gray, 60%);
+$cool-gray-300: tint-color($cool-gray, 40%);
+$cool-gray-400: tint-color($cool-gray, 20%);
+$cool-gray-500: $cool-gray;
+$cool-gray-600: shade-color($cool-gray, 20%);
+$cool-gray-700: shade-color($cool-gray, 40%);
+$cool-gray-800: shade-color($cool-gray, 60%);
+$cool-gray-900: shade-color($cool-gray, 80%);
+
+$shades: (
+  "blue-100": $blue-100,
+  "blue-200": $blue-200,
+  "blue-300": $blue-300,
+  "blue-400": $blue-400,
+  "blue-500": $blue-500,
+  "blue-600": $blue-600,
+  "blue-700": $blue-700,
+  "blue-800": $blue-800,
+  "blue-900": $blue-900,
+  "link-blue-50": $link-blue-50,
+  "link-blue-100": $link-blue-100,
+  "link-blue-200": $link-blue-200,
+  "link-blue-300": $link-blue-300,
+  "link-blue-400": $link-blue-400,
+  "link-blue-500": $link-blue-500,
+  "link-blue-600": $link-blue-600,
+  "link-blue-700": $link-blue-700,
+  "link-blue-800": $link-blue-800,
+  "link-blue-900": $link-blue-900,
+  "red-100": $red-100,
+  "red-200": $red-200,
+  "red-300": $red-300,
+  "red-400": $red-400,
+  "red-500": $red-500,
+  "red-600": $red-600,
+  "red-700": $red-700,
+  "red-800": $red-800,
+  "red-900": $red-900,
+  "teal-100": $teal-100,
+  "teal-200": $teal-200,
+  "teal-300": $teal-300,
+  "teal-400": $teal-400,
+  "teal-500": $teal-500,
+  "teal-600": $teal-600,
+  "teal-700": $teal-700,
+  "teal-800": $teal-800,
+  "teal-900": $teal-900,
+  "gray-100": $gray-100,
+  "gray-200": $gray-200,
+  "gray-300": $gray-300,
+  "gray-400": $gray-400,
+  "gray-500": $gray-500,
+  "gray-600": $gray-600,
+  "gray-700": $gray-700,
+  "gray-800": $gray-800,
+  "gray-900": $gray-900,
+  "warm-gray-100": $warm-gray-100,
+  "warm-gray-200": $warm-gray-200,
+  "warm-gray-300": $warm-gray-300,
+  "warm-gray-400": $warm-gray-400,
+  "warm-gray-500": $warm-gray-500,
+  "warm-gray-600": $warm-gray-600,
+  "warm-gray-700": $warm-gray-700,
+  "warm-gray-800": $warm-gray-800,
+  "warm-gray-900": $warm-gray-900,
+  "cool-gray-100": $cool-gray-100,
+  "cool-gray-200": $cool-gray-200,
+  "cool-gray-300": $cool-gray-300,
+  "cool-gray-400": $cool-gray-400,
+  "cool-gray-500": $cool-gray-500,
+  "cool-gray-600": $cool-gray-600,
+  "cool-gray-700": $cool-gray-700,
+  "cool-gray-800": $cool-gray-800,
+  "cool-gray-900": $cool-gray-900
+);
+
+// scss-docs-start theme-color-variables
+$primary:       $red;
+$secondary:     $white;
+$info:          $blue-500;
+$danger:        $red-600;
+$light:         $gray-100;
+$dark:          $gray-800;
+$teal:          $teal-500;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "info":       $info,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "teal":       $teal
+);
+// scss-docs-end theme-colors-map
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color:                $gray-800;
+$body-bg:                   $gray-50;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                $info;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-radius-variables
+$border-radius:               1rem;
+$border-radius-light:         calc($border-radius / 2);
+
+$modal-border-radius:         $border-radius;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start box-shadow-variables
+$box-shadow:                  0 0.125rem 0.5rem rgba($black, .35) !default;
+// scss-docs-end box-shadow-variables
+
+//Navbar
+//
+$navbar-light-active-color: $white;
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+// scss-docs-start dropdown-variables
+$dropdown-color:                $dark;
+$dropdown-bg:                   $gray-100;
+$dropdown-border-color:         $gray-300;
+$dropdown-border-radius:        $border-radius-light;
+
+$dropdown-link-active-color:    $dark;
+$dropdown-link-active-bg:       $gray-100;
+
+$dropdown-link-hover-bg:        $gray-300;
+
+$dropdown-item-padding-y:       0.625rem;
+$dropdown-item-padding-x:       1.5rem;
+// scss-docs-end dropdown-variables
+
+// Offcanvas
+
+// scss-docs-start offcanvas-variables
+$offcanvas-bg-color:            $gray-800;
+$offcanvas-color:               $white;
+$offcanvas-dropdown-bg-color:   $gray-800;
+// scss-docs-end offcanvas-variables
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:    $font-family-thin-stack;
+$font-size-base:            1rem;
+
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+// scss-docs-start btn-variables
+
+$btn-padding-x:                 1.25rem;
+$btn-padding-y:                 0.5rem;
+
+$btn-border-radius:             $border-radius * 2;
+$btn-font-family:               $font-family-thick-stack;
+$btn-hover-bg-shade-amount:     25%;
+$btn-hover-border-shade-amount: 25%;
+
+// scss-docs-end btn-variables
+
+// Cards
+
+// scss-docs-start card-variables
+$card-bg:                       $white;
+// scss-docs-end card-variables
+
+// Accordion
+
+// scss-docs-start accordion-variables
+$accordion-button-active-bg:        $teal-100;
+$accordion-button-active-color:     $blue-800;
+$accordion-button-focus-box-shadow: 0 0 0 0.25rem rgba(0, 120, 159, 0.35);
+
+$accordion-icon-width:              1.8rem;
+$accordion-button-icon:             url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#e7342c'><path d='M7.4,8.6l4.6,4.6l4.6-4.6L18,10l-6,6l-6-6L7.4,8.6z'/></svg>") !default;
+$accordion-button-active-icon:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#e7342c'><path d='M7.4,8.6l4.6,4.6l4.6-4.6L18,10l-6,6l-6-6L7.4,8.6z'/></svg>") !default;
+// scss-docs-end accordion-variables

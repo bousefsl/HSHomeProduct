@@ -1,0 +1,61 @@
+// Custom unordered lists with ticks or crosses
+
+ul {
+    /*Ticks*/
+    &.ticks {
+        padding-left: 2rem;
+
+        & li {
+            list-style: none; position: relative;
+
+            &::before {
+                font-family: "HomeServe-Icons"; content: "\e922"; font-size: 1.5rem; 
+                position: absolute; top:-1px; left: -2rem; color: $teal; line-height: 1;
+            }
+
+            &.blank::before {content: "";}
+        }
+    }
+
+    /*Crosses*/
+    &.crosses {
+        @extend .ticks;
+            
+        & li {
+            &::before {content: "\e921"; color: $red-700;}
+        }
+    }
+
+    & li {
+        //Bullet point
+        &::marker {color: $teal;}
+    }
+}
+
+//Custom spacer
+.section-spacer {padding-bottom: 4rem;}
+
+//Custom Button Group (Product)
+.btn-icon-wrapper {
+    border-width: 0 !important;
+
+    & .btn-icon {
+        display: inline-block; background-color:#fff; border-radius: 50%; width: 1.5rem; height: 1.5rem; margin-right: 0.25rem; position: relative;
+    }
+
+    &.active {
+        & .btn-icon::before {
+            font-family: "HomeServe-Icons"; content: "\e922"; font-size: 22px; line-height: 22px; color: $teal; position: absolute; top:0; left: 0;
+        }
+    }
+}
+
+//Custom Text Link
+a {text-underline-offset: 0.15rem !important; text-decoration-skip-ink: auto;}
+
+//Animated arrow link
+.animated-arrow-link {
+    & i[class^="icon-hs-arrow"] {transition: all ease-out 0.3s; margin-left: 0; display: inline-block;}
+
+    &:hover i[class^="icon-hs-arrow"] {margin-left: 0.5rem;}
+}

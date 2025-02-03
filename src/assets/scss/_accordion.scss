@@ -1,0 +1,16 @@
+div#property-toggle {
+    &.house-selected {
+        & .house {display: block;}
+        & .flat {display: none;}
+    }
+    &.flat-selected {
+        & .house {display: none;}
+        & .flat {display: block;}
+    }
+}
+
+.accordion {
+    & .accordion-button {
+        &::after {color: $primary;}
+    }
+}
